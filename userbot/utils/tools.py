@@ -6,8 +6,6 @@
 
 import re
 import hashlib
-<<<<<<< HEAD
-=======
 import asyncio
 import datetime
 import logging
@@ -26,8 +24,6 @@ from telethon import events
 from telethon.tl.functions.messages import GetPeerDialogsRequest
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
->>>>>>> foo/sql-extended
-
 
 async def md5(fname: str) -> str:
     hash_md5 = hashlib.md5()
@@ -74,9 +70,6 @@ def human_to_bytes(size: str) -> int:
     if not re.match(r' ', size):
         size = re.sub(r'([KMGT])', r' \1', size)
     number, unit = [string.strip() for string in size.split()]
-<<<<<<< HEAD
-    return int(float(number)*units[unit])
-=======
     return int(float(number)*units[unit])
 
 async def is_admin(chat_id, user_id):
@@ -88,4 +81,3 @@ async def is_admin(chat_id, user_id):
     if isinstance(chat_participant, ChannelParticipantCreator) or isinstance(chat_participant, ChannelParticipantAdmin):
         return True
     return False
->>>>>>> foo/sql-extended
