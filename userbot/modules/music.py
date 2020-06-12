@@ -76,8 +76,6 @@ async def _(event):
               return
           await event.delete()
           await bot.forward_messages(event.chat_id, respond.message)
-<<<<<<< HEAD
-=======
 
 @register(outgoing=True, pattern="^.netease(?: |$)(.*)")
 async def WooMai(netase):
@@ -134,19 +132,11 @@ async def DeezLoader(Deezlod):
           await Deezlod.client.delete_messages(conv.chat_id,
                                              [msg_start.id, response.id, r.id, msg.id, details.id, song.id])
           await Deezlod.delete()          
->>>>>>> foo/sql-extended
-    
+
 CMD_HELP.update({
         "music":
         "`.song` <search title>\
             \nUsage: For searching songs.\
-<<<<<<< HEAD
-            \n\n`.spd`\
-            \nUsage:For searching songs from Spotify."
-})
-
-
-=======
             \n\n`.spd`<Artist - Song Title>\
             \nUsage:For searching songs from Spotify.\
             \n\n`.netease` <Artist - Song Title>\
@@ -154,5 +144,3 @@ CMD_HELP.update({
             \n\n`.dzd` <Spotify/Deezer Link>\
             \nUsage:Download music from Spotify or Deezer."
 })
-
->>>>>>> foo/sql-extended
