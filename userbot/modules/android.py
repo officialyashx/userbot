@@ -7,14 +7,11 @@
 
 import asyncio
 import re
-import os
-import time
-import math
-
+import json
 from requests import get
 from bs4 import BeautifulSoup
-
-from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
+import asyncio
+from userbot import CMD_HELP
 from userbot.events import register
 from userbot.utils import chrome, humanbytes, time_formatter, md5, human_to_bytes
 
@@ -177,44 +174,6 @@ async def device_info(request):
                      f"**Model**: {item['model']}\n\n"
     else:
         reply = f"`Couldn't find info about {codename}!`\n"
-    await request.edit(reply)
-
-@register(outgoing=True, pattern=r"^.codename(?: |)([\S]*)(?: |)([\s\S]*)")
-async def codename_info(request):
-    """ search for android codename """
-    textx = await request.get_reply_message()
-    brand = request.pattern_match.group(1).lower()
-    device = request.pattern_match.group(2).lower()
-
-    if brand and device:
-        pass
-    elif textx:
-        brand = textx.text.split(' ')[0]
-        device = ' '.join(textx.text.split(' ')[1:])
-    else:
-        await request.edit("`Usage: .codename <brand> <device>`")
-        return
-
-    data = json.loads(
-        get("https://raw.githubusercontent.com/androidtrackers/"
-            "certified-android-devices/master/by_brand.json").text)
-    devices_lower = {k.lower(): v
-                     for k, v in data.items()}  # Lower brand names in JSON
-    devices = devices_lower.get(brand)
-    results = [
-        i for i in devices if i["name"].lower() == device.lower()
-        or i["model"].lower() == device.lower()
-    ]
-    if results:
-        reply = f"**Search results for {brand} {device}**:\n\n"
-        if len(results) > 8:
-            results = results[:8]
-        for item in results:
-            reply += f"**Device**: {item['device']}\n" \
-                     f"**Name**: {item['name']}\n" \
-                     f"**Model**: {item['model']}\n\n"
-    else:
-        reply = f"`Couldn't find {device} codename!`\n"
     await request.edit(reply)
 
 @register(outgoing=True, pattern=r"^.device(?: |$)(\S*)")

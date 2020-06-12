@@ -63,7 +63,8 @@ async def waifu(animu):
                             hide_via=True)
     await animu.delete()
 
-CMD_HELP.update(
-    {"waifu":
-    "`.waifu`  text\
-    \nUsage:for custom stickers."})
+
+CMD_HELP.update({
+    'waifu': '.waifi text\
+        \nUsage: Upload text in Image.'
+})

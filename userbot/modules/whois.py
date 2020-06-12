@@ -17,7 +17,7 @@ from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
 from userbot.events import register
 
 
-@register(pattern=".data(?: |$)(.*)", outgoing=True)
+@register(pattern=".abt(?: |$)(.*)", outgoing=True)
 async def who(event):
 
     await event.edit(
@@ -149,6 +149,6 @@ async def fetch_info(replied_user, event):
 
 CMD_HELP.update({
     "User Info":
-    "`.data` <username> or reply to someones text with `.data`\
+    ".abt <username> or reply to someones text with .abt\
     \nUsage: Gets info of an user."
 })

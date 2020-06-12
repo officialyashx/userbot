@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/abhinavshinde/oub-remix.svg?branch=sql-extended)](https://travis-ci.com/abhinavshinde/oub-remix)
 # Project OpenUserBot Remix
 
-![logo](https://telegra.ph/file/12fd39f968f0892ae1a7e.jpg)
+![logo](https://telegra.ph/Oub-remix-06-12)
 
 ```
 #include <std/disclaimer.h>

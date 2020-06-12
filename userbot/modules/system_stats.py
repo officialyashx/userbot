@@ -175,4 +175,4 @@ CMD_HELP.update({
 \nUsage: Changes the 'user' in alive to the text you want.\
 \n\n`.resetalive`\
 \nUsage: Resets the user to default."
-})  
+})
