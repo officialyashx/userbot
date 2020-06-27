@@ -17,10 +17,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "HeY! You Have Entered a Forbidden place.\n\n"
+    "Good Day! Are you really here because I allowed you ?\n\n"
     "I haven't approved you to PM yet."
-    "Wait for me to look in your Background, before I allow you.\n\n"
-    "Until then, please don't spam my PM, you'll get blocked and reported if you do so!")
+    "Wait for me to look into your existance, before I allow you.\n\n"
+    "Until then, Don't spam my PM, you'll get blocked and will be sent to a shithole full of spammers! Idc K thnx bye.")
 # =================================================================
 
 
