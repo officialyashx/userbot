@@ -17,9 +17,9 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "Good Day! Are you really here because I allowed you ?\n\n"
-    "I haven't approved you to PM yet."
-    "Wait for me to look into your existance, before I allow you.\n\n"
+    "Hello! Are you really here because I allowed you or asked you to PM ?\n\n"
+    "If not, mention your purpose to message me with the Group Name ! I haven't approved you to PM yet and won't do till I don't find you as a cool person. "
+    "Wait for me to look into your existance, before I allow you to my PMs.\n\n"
     "Until then, Don't spam my PM, you'll get blocked and will be sent to a shithole full of spammers! Idc K thnx bye.")
 # =================================================================
 
@@ -185,7 +185,7 @@ async def approvepm(apprvpm):
         await apprvpm.edit("`User may already be approved. Sorry for the inconvenience.`")
         return
 
-    await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `approved to PM! Have Fun!`")
+    await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `You're approved to PMs! Have Fun! Be Friendly ! Don't be a Snake. Kbye`")
 
     async for message in apprvpm.client.iter_messages(apprvpm.chat_id,
                                                       from_user='me',
